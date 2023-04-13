@@ -1,0 +1,38 @@
+<form method="POST">
+    <td>{{_id}}</td>
+    <td>
+        <select name="insurance" id="slInsurance" class="form-select">
+            <option value="yes">TAK</option>
+            <option value="no">NIE</option>
+            <option value="none">BRAK DANYCH</option>
+        </select>
+    </td>
+    <td>
+        <select name="gasoline" id="slgasoline" class="form-select">
+            <option value="yes">TAK</option>
+            <option value="no">NIE</option>
+            <option value="none">BRAK DANYCH</option>
+        </select>
+    </td>
+    <td>
+        <select name="damaged" id="sldamaged" class="form-select">
+            <option value="yes">TAK</option>
+            <option value="no">NIE</option>
+            <option value="none">BRAK DANYCH</option>
+        </select>
+    </td>
+    <td>
+        <select name="fourWheels" id="slfourWheels" class="form-select">
+            <option value="yes">TAK</option>
+            <option value="no">NIE</option>
+            <option value="none">BRAK DANYCH</option>
+        </select>
+    </td>
+    <td>
+        <button type="submit" value="{{_id}}" name="btnUpdate" id="btnUpdate" formaction="/updateCar"
+            class="btn btn-primary">Update</button>
+    </td>
+    <td>
+        <button type="submit" formaction="/cancelUpdate" class="btn btn-secondary">Cancel</button>
+    </td>
+</form>

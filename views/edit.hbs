@@ -1,0 +1,33 @@
+<div class="m-3">
+    <h1>{{subject}}</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <td scope="col">_id</td>
+                <td scope="col">Ubezpieczony</td>
+                <td scope="col">Benzyna</td>
+                <td scope="col">Uszkodzony</td>
+                <td scope="col">Napęd 4x4</td>
+                <td scope="col"></td>
+                <td scope="col"></td>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each content}}
+            <tr>
+                {{#if editing}}
+                {{> editRow}}
+                {{else}}
+                {{> row}}
+                <td>
+                    <form action="/editCar" method="POST">
+                        <button type="submit" class="btn btn-primary btn-sm" name="editBtn"
+                            value="{{_id}}">Edit</button>
+                    </form>
+                </td>
+                {{/if}}
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>

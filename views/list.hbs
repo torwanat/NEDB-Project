@@ -1,0 +1,28 @@
+<div class="m-3">
+    <h1>{{subject}}</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">_id</th>
+                <th scope="col">Ubezpieczony</th>
+                <th scope="col">Benzyna</th>
+                <th scope="col">Uszkodzony</th>
+                <th scope="col">Napęd 4x4</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each content}}
+            <tr>
+                {{> row}}
+                <td>
+                    <form action="/deleteCar" method="POST" onsubmit="return confirm('Czy usunąć?');">
+                        <button class="btn btn-danger btn-sm" type="submit" name="deleteBtn"
+                            value="{{_id}}">Delete</button>
+                    </form>
+                </td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>

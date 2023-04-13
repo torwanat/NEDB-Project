@@ -1,0 +1,27 @@
+<div class="m-3">
+    <h1>{{subject}}</h1>
+    {{#if message}}
+    <h4 class="alert alert-success rounded d-inline-block">{{message}}</h4>
+    {{/if}}
+    <form action="/addCar" method="POST">
+        <div class="form-group">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="insurance" id="insurance">
+                <label class="form-check-label" for="insurance">Ubezpieczony</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="gasoline" id="gasoline">
+                <label class="form-check-label" for="gasoline">Benzyna</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="damaged" id="damaged">
+                <label class="form-check-label" for="damaged">Uszkodzony</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="fourWheels" id="fourWheels">
+                <label class="form-check-label" for="fourWheels">Napęd 4x4</label>
+            </div>
+        </div>
+        <button class="btn btn-primary" type="submit">Add</button>
+    </form>
+</div>
